@@ -1,0 +1,99 @@
+.sb-footer {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    &_bg {
+      background-color: #2a2f36;
+      padding: 70px 0 160px 0;
+    }
+    &_item {
+      width: calc( 33% - 10px );
+    }
+    &_title {
+      position: relative;
+      padding-bottom: 20px;
+      font-size: 16px;
+      font-weight: @FW-Bold;
+      line-height: normal;
+      color: #e8e8e8;
+      margin-bottom: 40px;
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 40px;
+        height: 3px;
+        background-color: @C-blue;
+      }
+    }
+    &_text {
+      font-weight: @FW-Light;
+      font-size: 12px;
+      color: #aaaaaa;
+      line-height: 2;
+    }
+    &_social {
+      margin-top: 40px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: -10px;
+      & a {
+        flex: 0 0 37px;
+        height: 37px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        border: 1px solid #3d4248;
+        background-color: #3d4248;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        &:hover {
+          border: 1px solid #c0c2c4;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+  &__nav {
+    position: relative;
+    margin-top: -40px;
+    background-color: #34383e;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    & a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      font-size: 13px;
+      line-height: 2;
+      font-weight: @FW-Bold;
+      padding: 0 30px;
+      text-transform: uppercase;
+      height: 100%;
+      &:hover {
+        color: @C-blue;
+      }
+    }
+  }
+  &__copyright {
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #aaaaaa;
+    font-weight: @FW-Light;
+    &_bg {
+      margin-top: -40px;
+      z-index: 1;
+      background-color: #22262c;
+      padding: 70px 0 30px 0;
+    }
+  }
+}
