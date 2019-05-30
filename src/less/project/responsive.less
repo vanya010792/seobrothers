@@ -18,6 +18,62 @@
   .sb-description__right {
     flex: 0 0 320px;
   }
+  .sb-single-head {
+    &__wrap {
+      padding: 90px 15px 100px 15px;
+    }
+  }
+  .sb-news {
+    &__desc {
+      padding: 15px;
+    }
+    &__panel {
+      &_item {
+        font-size: 10px;
+      }
+    }
+    &__title {
+      font-size: 13px;
+    }
+    &__text {
+      font-size: 12px;
+    }
+  }
+  .sb-services {
+    margin-top: 35px;
+    &__item {
+      margin-bottom: 20px;
+    }
+    &__left {
+      width: calc( 50% - 20px );
+    }
+    &__right {
+      width: calc( 50% - 20px );
+    }
+    &__title {
+      font-size: 18px;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+    }
+    &__text {
+      line-height: 1.7;
+      padding-bottom: 10px;
+    }
+    &__rating {
+      padding: 7px 0;
+      margin-bottom: 30px;
+      &_left {
+        font-size: 12px;
+        color: @C-black-text;
+        font-weight: @FW-Light;
+      }
+    }
+    &__btn {
+      & .sb-btn {
+        padding: 14px 65px;
+      }
+    }
+  }
 }
 @media ( max-width: 768px ) {
   .sb-block {
@@ -30,9 +86,32 @@
       height: 2px;
     }
   }
+  .sb-page-title {
+    font-size: 38px;
+  }
+  .sb-btn {
+    &__gradient {
+      &--big {
+        font-size: 14px;
+        padding: 12px 30px;
+      }
+    }
+  }
   .sb-subtitle-block {
     margin: 15px auto 20px auto;
     font-size: 13px;
+  }
+  .sb-title-block__wrap {
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    & .sb-title-block {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    & .sb-subtitle-block {
+      width: 100%;
+      margin-left: 0;
+    }
   }
   .sb-content {
     & p {
@@ -95,10 +174,6 @@
        font-size: 16px;
        margin-bottom: 35px;
      }
-     &__link {
-       font-size: 14px;
-       padding: 12px 30px;
-     }
    }
   .sb-gallery {
     &__bg {
@@ -156,8 +231,41 @@
       }
     }
   }
+  .sb-single-head {
+    &__wrap {
+      padding: 80px 15px 90px 15px;
+    }
+  }
+  .sb-news {
+    &__item {
+      width: 100%;
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+    }
+    &__img {
+      max-height: 100%;
+      width: 100%;
+    }
+  }
+  .sb-about {
+    flex-wrap: wrap;
+    &__left {
+      display: none;
+    }
+    &__right {
+      flex: 0 0 100%;
+    }
+    &__title {
+      margin-bottom: 25px;
+      font-size: 26px;
+    }
+  }
 }
 @media ( max-width: 640px ) {
+  .sb-btn__transp--small {
+    font-size: 10px;
+    padding: 7px 20px;
+  }
   .sb-head {
     &__logo {
       flex: 0 0 54px;
@@ -179,6 +287,75 @@
     }
     &__text {
       font-size: 15px;
+    }
+  }
+  .sb-single-head {
+    &__wrap {
+      padding: 50px 15px 60px 15px;
+    }
+  }
+  .sb-news {
+    &__item {
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+    }
+    &__wrap {
+      width: 100%;
+      left: 0;
+    }
+    &__desc {
+      margin-bottom: 15px;
+    }
+    &__panel {
+      &_item {
+        margin-right: 8px;
+      }
+    }
+  }
+  .sb-services {
+    margin-top: 25px;
+    &__item {
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+    &__left {
+      width: 100%;
+    }
+    &__right {
+      width: 100%;
+    }
+    &__img {
+      order: 0;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    &__desc {
+      order: 1;
+    }
+    &__title {
+      font-size: 18px;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+    }
+    &__text {
+      line-height: 1.7;
+      padding-bottom: 10px;
+    }
+    &__rating {
+      padding: 7px 0;
+      margin-bottom: 20px;
+      &_left {
+        font-size: 12px;
+        color: @C-black-text;
+        font-weight: @FW-Light;
+      }
+    }
+    &__btn {
+      text-align: center;
+      & .sb-btn {
+        padding: 12px 45px;
+        font-size: 13px;
+      }
     }
   }
 }
@@ -248,5 +425,28 @@
     & a {
       height: auto;
     }
+  }
+  .sb-single-head {
+    &__wrap {
+      padding: 30px 15px;
+    }
+  }
+  .sb-about__title {
+    font-size: 24px;
+  }
+  .sb-faq {
+    &__title {
+      padding: 6px 23px 6px 0;
+      & img {
+        margin-right: 10px;
+      }
+    }
+    &__desc {
+      padding: 15px 0;
+    }
+  }
+  .sb-content p {
+    font-size: 14px;
+    margin-bottom: 15px;
   }
 }

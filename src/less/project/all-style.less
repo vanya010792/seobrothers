@@ -1,8 +1,5 @@
 .sb-block {
   margin-bottom: 70px;
-  &:last-child {
-    //margin-bottom: 0;
-  }
 }
 .sb-container {
   max-width: 1200px;
@@ -17,6 +14,18 @@
   line-height: 1.5;
   color: @C-black-text;
   font-weight: @FW-Bold;
+  margin-bottom: 25px;
+  &__wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 35px;
+    & .sb-subtitle-block {
+      margin: 0 0 0 40px;
+      text-align: left;
+      max-width: 100%;
+    }
+  }
   &::before {
     content: '';
     position: absolute;
@@ -48,5 +57,82 @@
     &:last-child {
       margin-bottom: 0;
     }
+  }
+}
+.sb-page-title {
+  color: @C-blue;
+  font-weight: @FW-Bold;
+  font-size: 48px;
+  line-height: 1.1;
+  text-shadow: 3.694px 4.728px 5.82px rgba(22, 137, 244, 0.24);
+  text-transform: uppercase;
+}
+.sb-btn {
+  display: inline-block;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: @FW-Bold;
+  letter-spacing: .8px;
+  &__gradient {
+    font-size: 15px;
+    color: #ffffff;
+    background-image: -moz-linear-gradient( 6deg, rgb(61,97,197) 0%, rgb(62,151,235) 100%);
+    background-image: -webkit-linear-gradient( 6deg, rgb(61,97,197) 0%, rgb(62,151,235) 100%);
+    background-image: -ms-linear-gradient( 6deg, rgb(61,97,197) 0%, rgb(62,151,235) 100%);
+    box-shadow: 4px 6.928px 35px 0px rgba(62, 134, 207, 0.58);
+    position: relative;
+    z-index: 100;
+    &::before {
+      display: block;
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      z-index: -1;
+      background-image: -moz-linear-gradient( 0deg, rgb(62,151,235) 0%, rgb(61,97,197) 100%);
+      background-image: -webkit-linear-gradient( 0deg, rgb(62,151,235) 0%, rgb(61,97,197) 100%);
+      background-image: -ms-linear-gradient( 0deg, rgb(62,151,235) 0%, rgb(61,97,197) 100%);
+      transition: .6s;
+
+    }
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+    }
+    &--big {
+      padding: 23px 48px;
+    }
+    &--medium {
+      padding: 18px 85px;
+    }
+    &--small {
+
+    }
+  }
+  &__transp {
+    color: @C-black-text;
+    border: 2px solid @C-blue;
+    &:hover {
+      background-color: @C-blue;
+      color: #ffffff;
+      box-shadow: 4px 6.928px 35px 0px rgba(62, 134, 207, 0.58);
+    }
+    &--small {
+      font-size: 10px;
+      padding: 10px 30px;
+    }
+    &--big {
+      padding: 15px 80px;
+      font-size: 16px;
+    }
+  }
+  &__more {
+    width: 100%;
+    text-align: center;
   }
 }

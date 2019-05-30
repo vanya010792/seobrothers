@@ -11,6 +11,7 @@
       width: calc( 33% - 10px );
     }
     &_title {
+      display: inline-block;
       position: relative;
       padding-bottom: 20px;
       font-size: 16px;
@@ -52,6 +53,14 @@
         background-color: #3d4248;
         margin-right: 10px;
         margin-bottom: 10px;
+        & img {
+          height: 12px;
+        }
+        &:first-child {
+          & img {
+            height: 14px;
+          }
+        }
         &:hover {
           border: 1px solid #c0c2c4;
           background-color: transparent;
