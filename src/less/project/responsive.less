@@ -86,6 +86,14 @@
       height: 2px;
     }
   }
+  .sb-btn__transp--medium {
+    padding: 12px 30px;
+  }
+  .sb-page-title-four {
+    font-size: 36px;
+    text-align: center;
+    margin: 30px 0 20px 0;
+  }
   .sb-page-title {
     font-size: 38px;
   }
@@ -258,6 +266,43 @@
     &__title {
       margin-bottom: 25px;
       font-size: 26px;
+    }
+  }
+  .sb-jobs {
+    &__item {
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    &__desc {
+      order: 1;
+      width: 100%;
+      &.sb-jobs__left {
+        padding-right: 0;
+      }
+      &.sb-jobs__right {
+        padding-left: 0;
+      }
+    }
+    &__img {
+      order: 0;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 15px;
+      &_overlap {
+        display: none;
+      }
+    }
+    &__title {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    &__text {
+      padding-left: 25px;
+      font-size: 15px;
+      margin-bottom: 25px;
+    }
+    &__btn {
+      text-align: center;
     }
   }
 }
